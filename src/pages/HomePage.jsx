@@ -1,3 +1,4 @@
+import React from 'react';
 import Difficulty from '../components/Difficulty';
 import useItit from '../hooks/useInit';
 import useToken from '../hooks/useToken';

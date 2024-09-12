@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import useCave from '../hooks/useCave';
 import Cave from '../components/Cave';
 import Drone from '../components/Drone';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Spiner from '../components/Spiner';
 
 function GamePage() {

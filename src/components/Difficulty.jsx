@@ -1,3 +1,4 @@
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedId } from '../store/reducer';
 
@@ -17,8 +18,7 @@ function Difficulty() {
         onClick={() => handleClick(id)}
         className={`py-2 px-8 rounded-lg cursor-pointer ${
           selectedId === id ? 'bg-plusBlue-100 text-plusBlue' : 'bg-plusBlue text-plusBlue-200'
-        }`}
-      >
+        }`}>
         {id}
       </div>
     );

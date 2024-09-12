@@ -1,3 +1,4 @@
+import React from 'react';
 function Spiner() {
   return (
     <div className="spinner-container">
