@@ -18,7 +18,8 @@ function Difficulty() {
         onClick={() => handleClick(id)}
         className={`py-2 px-8 rounded-lg cursor-pointer ${
           selectedId === id ? 'bg-plusBlue-100 text-plusBlue' : 'bg-plusBlue text-plusBlue-200'
-        }`}>
+        }`}
+      >
         {id}
       </div>
     );

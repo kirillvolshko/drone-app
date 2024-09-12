@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Difficulty from '../components/Difficulty';
 import useItit from '../hooks/useInit';
 import useToken from '../hooks/useToken';
@@ -15,9 +15,17 @@ function HomePage() {
   const { fetchToken } = useToken();
   const navigate = useNavigate();
 
+  const [errorMessage, setErrorMessage] = useState('');
+
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
+
+    if (!name || !complexity) {
+      setErrorMessage('Please select a name and difficulty of the game.');
+      return;
+    }
+    setErrorMessage('');
     const id = await InitialUser(complexity, name);
     const fetchedToken = await fetchToken(id);
     dispatch(setPlayerData({ playerId: id, token: fetchedToken }));
@@ -37,6 +45,7 @@ function HomePage() {
             <label htmlFor="difficulty">Difficulty</label>
             <Difficulty />
           </div>
+          {errorMessage && <div className="mb-5 text-red-500 text-center">{errorMessage}</div>}
           <div className="text-center">
             <button type="submit" className="submit-button">
               Play
