@@ -1,10 +1,9 @@
-
 function Spiner() {
-    return (
-        <div className="spinner-container">
-            <div className="spinner"></div>
-        </div>
-    )
+  return (
+    <div className="spinner-container">
+      <div className="spinner"></div>
+    </div>
+  );
 }
 
-export default Spiner
+export default Spiner;
