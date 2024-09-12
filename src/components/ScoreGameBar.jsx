@@ -45,6 +45,15 @@ function ScoreGameBar() {
         </div>
         <p>Speed: {droneSpeed}</p>
       </div>
+      <div>
+        <h4 className="text-plusBlue mb-2 font-semibold">
+          Use the arrow keys on your keyboard to control
+        </h4>
+        <p className="text-plusBlue mb-2">&#8593; Drone Speed Up</p>
+        <p className="text-plusBlue mb-2">&#8595; Drone Speed Down</p>
+        <p className="text-plusBlue mb-2">&#8594; Move to the left</p>
+        <p className="text-plusBlue mb-2">&#8592; Move to the right</p>
+      </div>
     </div>
   );
 }
